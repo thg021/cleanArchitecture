@@ -1,4 +1,5 @@
 import { HttpRequest, HttpResponse } from '../protocols/http';
+import { MissingParamError } from '../errors/missing-param-error';
 
 class SignUpController {
   handle(httpRequest: HttpRequest): HttpResponse {
@@ -14,7 +15,7 @@ class SignUpController {
 
     return {
       statusCode: 400,
-      body: new Error(`missing param: ${message}`),
+      body: new MissingParamError(message),
     };
   }
 }
