@@ -6,7 +6,6 @@ import { badRequest, serverError } from '../helpers/http-helper';
 
 import { MissingParamError } from '../errors/missing-param-error';
 import { InvalidParamError } from '../errors/invalid-param-error';
-import { ServerError } from '../errors/server-error';
 
 class SignUpController implements Controller {
   //propriedade
@@ -38,7 +37,7 @@ class SignUpController implements Controller {
         statusCode: 200,
       };
     } catch (error) {
-      return serverError(new ServerError());
+      return serverError();
     }
   }
 }
