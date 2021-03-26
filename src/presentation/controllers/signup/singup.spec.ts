@@ -240,7 +240,7 @@ describe('SignUp Controller', () => {
 
     const httpResponse = await sut.handle(httpRequest);
     expect(httpResponse.statusCode).toBe(200);
-    await expect(httpResponse.body).resolves.toEqual({
+    expect(httpResponse.body).toEqual({
       id: 'valid_id',
       name: 'valid_name',
       email: 'valid_email@mail.com',
