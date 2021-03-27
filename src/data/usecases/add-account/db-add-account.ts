@@ -16,15 +16,15 @@ class DbAddAccount implements AddAccount {
     this.encripter = encripter;
     this.addAccountRepository = addAccountRepository;
   }
-  async add(accountData: AddAccountModel): Promise<AccountModel | null> {
+  async add(accountData: AddAccountModel): Promise<AccountModel> {
     const hashPassword = await this.encripter.encrypt(accountData.password);
-    await this.addAccountRepository.add(
+    const account = await this.addAccountRepository.add(
       Object.assign({}, accountData, {
         password: hashPassword,
       }),
     );
 
-    return new Promise(resolve => resolve(null));
+    return account;
   }
 }
 
