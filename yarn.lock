@@ -715,10 +715,15 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^14.14.35":
+"@types/node@*":
   version "14.14.35"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.35.tgz#42c953a4e2b18ab931f72477e7012172f4ffa313"
   integrity sha512-Lt+wj8NVPx0zUmUwumiVXapmaLUcAk3yPuHCFVXras9k5VT9TdhJqKqGVUQCD60OTMCl0qxJ57OiTL0Mic3Iag==
+
+"@types/node@^14.14.37":
+  version "14.14.37"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
+  integrity sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -3783,6 +3788,38 @@ mongodb-memory-server-core@6.6.7:
   optionalDependencies:
     mongodb "^3.5.9"
 
+mongodb-memory-server-core@6.9.6:
+  version "6.9.6"
+  resolved "https://registry.yarnpkg.com/mongodb-memory-server-core/-/mongodb-memory-server-core-6.9.6.tgz#90ef0562bea675ef68bd687533792da02bcc81f3"
+  integrity sha512-ZcXHTI2TccH3L5N9JyAMGm8bbAsfLn8SUWOeYGHx/vDx7vu4qshyaNXTIxeHjpUQA29N+Z1LtTXA6vXjl1eg6w==
+  dependencies:
+    "@types/tmp" "^0.2.0"
+    camelcase "^6.0.0"
+    cross-spawn "^7.0.3"
+    debug "^4.2.0"
+    find-cache-dir "^3.3.1"
+    find-package-json "^1.2.0"
+    get-port "^5.1.1"
+    https-proxy-agent "^5.0.0"
+    lockfile "^1.0.4"
+    md5-file "^5.0.0"
+    mkdirp "^1.0.4"
+    semver "^7.3.2"
+    tar-stream "^2.1.4"
+    tmp "^0.2.1"
+    uuid "^8.3.0"
+    yauzl "^2.10.0"
+  optionalDependencies:
+    mongodb "^3.6.2"
+
+mongodb-memory-server-global@^6.9.6:
+  version "6.9.6"
+  resolved "https://registry.yarnpkg.com/mongodb-memory-server-global/-/mongodb-memory-server-global-6.9.6.tgz#fafea0dfdabde110f103fe07072d52217fe87856"
+  integrity sha512-pdtr0gRvbL1wHNeLDWsHbQWeSkPPySdQ0moUyo+LxXHqCnJJGs+0Y5vgDCo1UYkCH9ZkbwFnw+CPmAX3YUXnvQ==
+  dependencies:
+    mongodb-memory-server "6.9.6"
+    os "^0.1.1"
+
 mongodb-memory-server@6.6.7:
   version "6.6.7"
   resolved "https://registry.yarnpkg.com/mongodb-memory-server/-/mongodb-memory-server-6.6.7.tgz#fa5f1e8153f4248c7c166f99b5143662699f40d6"
@@ -3790,7 +3827,14 @@ mongodb-memory-server@6.6.7:
   dependencies:
     mongodb-memory-server-core "6.6.7"
 
-mongodb@^3.5.9, mongodb@^3.6.5:
+mongodb-memory-server@6.9.6, mongodb-memory-server@^6.9.6:
+  version "6.9.6"
+  resolved "https://registry.yarnpkg.com/mongodb-memory-server/-/mongodb-memory-server-6.9.6.tgz#ced1a100f58363317a562efaf8821726c433cfd2"
+  integrity sha512-BjGPPh5f61lMueG7px9DneBIrRR/GoWUHDvLWVAXhQhKVcwMMXxgeEba6zdDolZHfYAu6aYGPzhOuYKIKPgpBQ==
+  dependencies:
+    mongodb-memory-server-core "6.9.6"
+
+mongodb@^3.5.9, mongodb@^3.6.2, mongodb@^3.6.5:
   version "3.6.5"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.6.5.tgz#c27d786fd4d3c83dc19302483707d12a9d2aee5f"
   integrity sha512-mQlYKw1iGbvJJejcPuyTaytq0xxlYbIoVDm2FODR+OHxyEiMR021vc32bTvamgBjCswsD54XIRwhg3yBaWqJjg==
@@ -4055,6 +4099,11 @@ optionator@^0.9.1:
     prelude-ls "^1.2.1"
     type-check "^0.4.0"
     word-wrap "^1.2.3"
+
+os@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/os/-/os-0.1.1.tgz#208845e89e193ad4d971474b93947736a56d13f3"
+  integrity sha1-IIhF6J4ZOtTZcUdLk5R3NqVtE/M=
 
 p-each-series@^2.1.0:
   version "2.2.0"
@@ -5020,7 +5069,7 @@ table@^6.0.4:
     slice-ansi "^4.0.0"
     string-width "^4.2.0"
 
-tar-stream@^2.1.3:
+tar-stream@^2.1.3, tar-stream@^2.1.4:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/tar-stream/-/tar-stream-2.2.0.tgz#acad84c284136b060dc3faa64474aa9aebd77287"
   integrity sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==
