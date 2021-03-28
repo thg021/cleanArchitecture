@@ -1,6 +1,4 @@
 node_modules
 dist
 coverage
-/examples/*/node_modules/
-/examples/mongodb/globalConfig.json
 globalConfig.json

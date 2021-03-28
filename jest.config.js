@@ -15,5 +15,5 @@ module.exports = {
   transform: {
     '.+\\.ts$': 'ts-jest'
   }, 
-  watchPathIgnorePatterns: ['globalConfig'],
+  watchPathIgnorePatterns: ['globalConfig.json'],
 }
